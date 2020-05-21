@@ -1,4 +1,7 @@
+SERVICE_NAME=hello-world-printer
+DOCKER_IMG_NAME=$(SERVICE_NAME)
 .PHONY: test
+.DEFAULT_GOAL := test
 
 deps:
 	pip install -r requirements.txt; \
@@ -14,18 +17,22 @@ test:
 	PYTHONPATH=. py.test --verbose -s
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t $(DOCKER_IMG_NAME) .
 
 docker_run: docker_build
 	docker run \
-	--name hello-world-printer-dev \
+	--name $(SERVICE_NAME)-dev \
 	-p 5000:5000 \
-	-d hello-world-printer
+	-d $(DOCKER_IMG_NAME)
+
+docker_stop:
+	docker stop $(SERVICE_NAME)-dev
 
 USERNAME=atesterwsb
-TAG=$(USERNAME)/hello-world-printer
+TAG=$(USERNAME)/$(DOCKER_IMG_NAME)
+
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag hello-world-printer $(TAG); \
+	docker tag $(DOCKER_IMG_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
