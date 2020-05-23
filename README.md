@@ -1,5 +1,10 @@
 # Simple Flask App
 
+https://travis-ci.org/astasiowska/se_hello_printer_app.svg?branch=master
+
+<a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=IUjrvqfji2&Days=1&Design=1" /></a>
+
+
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
@@ -47,7 +52,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
