@@ -1,6 +1,6 @@
 # Simple Flask App
 
-<a title="Latest push build on default branch: passed" name="status-images" class="pointer open-popup"><img src="https://travis-ci.org/astasiowska/se_hello_printer_app.svg?branch=master&amp;status=passed" alt="build:passed"></a><img src="https://travis-ci.org/astasiowska/se_hello_printer_app.svg?branch=master&amp;status=passed" alt="build:passed">
+[![Build Status](https://travis-ci.org/astasiowska/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/github/astasiowska/se_hello_printer_app)
 
 <a href="https://www.statuscake.com" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=IUjrvqfji2&Days=1&Design=1" /></a>
 
