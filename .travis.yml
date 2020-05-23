@@ -12,3 +12,4 @@ deploy:
   provider: heroku
   app: young-headland-67045
   api_key: ${HEROKU_API_KEY}
+  - make test_xunit
