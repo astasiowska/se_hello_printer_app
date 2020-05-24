@@ -29,11 +29,11 @@ docker_stop:
 	docker stop $(SERVICE_NAME)-dev
 
 USERNAME=atesterwsb
-TAG=$(USERNAME)/$(DOCKER_IMG_NAME)
+TAG=$(USERNAME)/hello-world-printer
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag $(DOCKER_IMG_NAME) $(TAG); \
+	docker tag hello-world-printer $(TAG); \
 	docker push $(TAG); \
 	docker logout;
 
